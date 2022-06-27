@@ -1,0 +1,37 @@
+.text{
+    margin: 0%;
+    border: 0%;
+    font-family: 'Inter', sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 5.8rem;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    text-overflow: auto;
+    
+}
+
+.text-animate {
+    display: inherit;
+    text-overflow: auto;
+    opacity: 0;
+    animation: bounceIn;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    min-width: 20px;
+    }
+
+    .text :hover {
+        animation: rubberBand 0.5s;
+        color: #ffd900;
+      }
+  
+ 
+  @for $i from 1 through 50 {
+    .text-animate._#{$i} {
+      animation-delay: #{$i / 10}s;
+    }
+  }
